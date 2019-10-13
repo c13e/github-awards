@@ -40,3 +40,5 @@ newrelic.yml
 bower.json
 
 ressources/*
+
+.ruby-version
