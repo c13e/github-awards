@@ -28,10 +28,11 @@ Rails.application.configure do
   config.assets.debug = true
 
   config.log_level = :debug
-  ar_logger = Logger.new(STDOUT)
-  ar_logger.level = Logger::DEBUG
-  ActiveRecord::Base.logger = ar_logger
-  
+  # ar_logger = Logger.new(STDOUT)
+  # ar_logger.level = Logger::DEBUG
+  # ActiveRecord::Base.logger = ar_logger
+  config.active_record.logger = nil
+
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
@@ -42,7 +43,7 @@ Rails.application.configure do
   config.assets.raise_runtime_errors = true
 
   Rails.application.routes.default_url_options = { host: 'localhost:5000' }
-  
+
   REDIS_URL="redis://localhost:6379"
 
   # Raises error for missing translations
