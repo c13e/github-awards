@@ -10,7 +10,7 @@ development:
   database: gitubawards_development
   pool: 100
   username: gitubawards
-  password: 
+  password: <%= ENV['TEMP_GITHUB_AWARDS_PWD'] %>
 
 test:
   adapter: postgresql
@@ -18,7 +18,7 @@ test:
   database: gitubawards_test
   pool: 5
   username: gitubawards
-  password: 
+  password: <%= ENV['TEMP_GITHUB_AWARDS_PWD'] %>
 
 production:
   adapter: postgresql
@@ -27,5 +27,5 @@ production:
   port: 5432
   database: gitubawards_production
   pool: 100
-  username: gitubawards
+  username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
