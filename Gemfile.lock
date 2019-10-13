@@ -166,6 +166,8 @@ GEM
     pry-byebug (3.5.1)
       byebug (~> 9.1)
       pry (~> 0.10)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     puma (2.11.3)
       rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
@@ -309,6 +311,7 @@ DEPENDENCIES
   omniauth-github (~> 1.1.2)
   pg (~> 0.18.2)
   pry-byebug (~> 3.1)
+  pry-rails
   puma (~> 2.11.1)
   quiet_assets (~> 1.1.0)
   rails (~> 4.2.7.1)
@@ -334,4 +337,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.1
+   1.17.3
