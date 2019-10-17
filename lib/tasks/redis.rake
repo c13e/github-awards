@@ -1,9 +1,3 @@
-require 'ddtrace'
-
-Datadog.configure do |c|
-  c.use :rake, options
-end
-
 namespace :redis do
 
   desc "Clean sidekiq jobs"

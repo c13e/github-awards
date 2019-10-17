@@ -1,9 +1,3 @@
-require 'ddtrace'
-
-Datadog.configure do |c|
-  c.use :rake, options
-end
-
 namespace :repo do
   desc "Crawl github API for repositories"
   task crawl: :environment do
