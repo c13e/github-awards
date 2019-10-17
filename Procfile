@@ -1,2 +1,2 @@
-web: bundle exec puma -C /srv/www/githubawards/shared/puma.rb
+web: bundle exec puma -C config/puma.rb
 worker: bundle exec sidekiq -c 5
