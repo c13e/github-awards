@@ -23,7 +23,8 @@ gem 'rorvswild',                    '~> 1.0.0'
 gem 'active_model_serializers',     '~> 0.9.3'
 gem 'swagger-docs',                 '~> 0.1.9'
 gem 'newrelic_rpm',                 '~> 3.18.1.330'
-gem 'lograge',                      '~> 0.3.4'
+gem 'lograge',                      '~> 0.9.0'
+gem 'lograge-sql'
 gem 'ddtrace'
 gem "sentry-raven"
 
