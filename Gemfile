@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.4.9'
 
-gem 'rails',                        '~> 4.2.7.1'
+gem 'rails',                        '~> 4.2.11.1'
 gem 'sass-rails',                   '~> 5.0'
 gem 'uglifier',                     '~> 2.7.0'
 gem 'turbolinks',                   '~> 2.5.3'
@@ -13,7 +13,7 @@ gem 'sidekiq-throttler',            '~> 0.4.1'
 gem 'octokit',                      '~> 3.7.0'
 gem 'octicons-rails',               '~> 2.1.1'
 gem 'actionpack-action_caching',    '~> 1.1.1'
-gem 'redis',                        '~> 3.2.0'
+gem 'redis',                        '~> 3.3.5'
 gem 'puma',                         '~> 2.11.1'
 gem 'httparty',                     '~> 0.13.3'
 gem 'kaminari',                     '~> 0.16.3'
@@ -22,7 +22,7 @@ gem 'omniauth-github',              '~> 1.1.2'
 gem 'rorvswild',                    '~> 1.0.0'
 gem 'active_model_serializers',     '~> 0.9.3'
 gem 'swagger-docs',                 '~> 0.1.9'
-gem 'newrelic_rpm',                 '~> 3.9.9.275'
+gem 'newrelic_rpm',                 '~> 3.18.1.330'
 gem 'lograge',                      '~> 0.3.4'
 
 group :development do
