@@ -25,6 +25,7 @@ gem 'swagger-docs',                 '~> 0.1.9'
 gem 'newrelic_rpm',                 '~> 3.18.1.330'
 gem 'lograge',                      '~> 0.3.4'
 gem 'ddtrace'
+gem "sentry-raven"
 
 group :development do
   gem 'quiet_assets',               '~> 1.1.0'
@@ -49,8 +50,4 @@ end
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-byebug',                  '~> 3.1'
-end
-
-group :production do
-  gem "sentry-raven",               :git => "https://github.com/getsentry/raven-ruby.git"
 end
