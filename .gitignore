@@ -42,3 +42,4 @@ bower.json
 ressources/*
 
 .ruby-version
+.tools-version
