@@ -27,6 +27,7 @@ gem 'lograge',                      '~> 0.9.0'
 gem 'lograge-sql'
 gem 'ddtrace'
 gem "sentry-raven"
+gem 'dogstatsd-ruby'
 
 group :development do
   gem 'quiet_assets',               '~> 1.1.0'
