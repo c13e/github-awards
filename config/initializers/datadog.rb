@@ -7,5 +7,6 @@ Datadog.configure do |c|
   c.runtime_metrics_enabled = true
 
   c.use :rails, service_name: 'rails-app'
-  c.use :sidekiq
+  c.use :sidekiq, service_name: 'sidekiq-server'
+  c.use :redis, service_name: 'redis-server'
 end
