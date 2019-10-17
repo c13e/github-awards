@@ -1,10 +1,10 @@
 class Models::GithubClient
-  attr_accessor :max_list_size
+  attr_accessor :max_users
   attr_accessor :on_found_object, :on_error, :on_too_many_requests
 
   def initialize(token=nil)
     @client = Octokit::Client.new(access_token: token)
-    @max_list_size = 1000
+    @max_users = ENV['MAX_USERS']&.to_i || 500
     @current_result_size = 0
     @current_page = 1
   end
@@ -22,7 +22,7 @@ class Models::GithubClient
 
       @current_result_size += results.items.size
       Rails.logger.info "Current total at #{@current_result_size} users"
-      break if @current_result_size >= @max_list_size
+      break if @current_result_size >= @max_users
       @current_page += 1
     end
   end
