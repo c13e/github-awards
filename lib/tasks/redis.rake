@@ -1,12 +1,18 @@
+require 'ddtrace'
+
+Datadog.configure do |c|
+  c.use :rake, options
+end
+
 namespace :redis do
-  
+
   desc "Clean sidekiq jobs"
   task clear_sidekiq: :environment do
     require "sidekiq/api"
     Sidekiq::Queue.new.clear
     Sidekiq::RetrySet.new.clear
   end
-  
+
   desc "Load ranking in redis"
   task set_ranks: :environment do
     User.select("users.id").joins(:repositories).where("users.organization=false AND repositories.language IS NOT NULL").distinct.find_each(:batch_size => 2000) do |user|
