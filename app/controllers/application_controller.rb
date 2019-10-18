@@ -40,6 +40,11 @@ class ApplicationController < ActionController::Base
     return redirect_to '/'
   end
 
+  def exception
+    Rails.logger.info "[ERROR] About to throw an exception!!"
+    raise "Runtime exception baby!!!"
+  end
+
   def not_found
     raise ActiveRecord::RecordNotFound.new('Not Found')
   end
