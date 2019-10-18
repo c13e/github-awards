@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root to: "application#welcome", as: 'welcome'
+  get "stress" => "application#stress"
 
   get "about" => "application#about"
 
