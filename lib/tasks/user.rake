@@ -11,7 +11,7 @@ namespace :user do
     geocoder = args.geocoder || :googlemap
     proxy_opts = {http_proxyaddr: "127.0.0.1", http_proxyport: 5566}
 
-    User.select("id, location").where("created_at > ?", args.start_date).where("(location IS NOT NULL) AND (location != '') AND ((city IS NULL) OR (city = '')) AND location NOT IN (?)", $redis.smembers("location_error")).each do |user|
+    User.select("id, location").where("(location IS NOT NULL) AND (location != '') AND ((city IS NULL) OR (city = '')) AND location NOT IN (?)", $redis.smembers("location_error")).each do |user|
       GeocoderWorker.perform_async(user.location, geocoder, proxy_opts)
     end
   end
